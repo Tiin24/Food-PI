@@ -1,0 +1,46 @@
+
+
+  .div_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .All_Cards{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .All_Cards{
+    text-decoration: none;
+  }
+  
+
+  .Svg_top{
+    fill:#735538; 
+    fill-opacity:1;
+  }
+
+  .Svg_bot{
+    fill:#735538; 
+    fill-opacity:1;
+  }
+  
+  
+  
+  
+  
+  

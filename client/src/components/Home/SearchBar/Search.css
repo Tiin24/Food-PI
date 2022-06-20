@@ -1,0 +1,44 @@
+.group {
+  margin-top: -44px;
+}
+
+.inputS {
+  width: 90%;
+  max-width: 190px;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+  margin-top: -6px;
+  margin-bottom: 6px;
+}
+
+.inputS::placeholder {
+  color: #9e9ea7;
+}
+
+.inputS:focus,
+.inputSs:hover {
+  outline: none;
+  border-color: rgba(8, 3, 5, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(9, 6, 8, 0.1);
+}
+
+.icon {
+  height: 25px;
+  background-color: #73553808;
+  margin-bottom: -6px;
+}
+
+.btnS {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

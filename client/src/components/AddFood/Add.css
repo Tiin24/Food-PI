@@ -1,0 +1,143 @@
+.card {
+  width: 30rem;
+  height: 40rem;
+  background: #926840;
+    border: 1px solid #a5774b;
+    border-radius: 19px;
+  box-shadow: 10px 10px 64px 0px rgba(3, 3, 3, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(0, 0, 1, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(2, 2, 2, 0.75);
+}
+
+.flex {
+
+  background: url(https://cdn2.cocinadelirante.com/sites/default/files/images/2020/06/recetas-saludables-de-ensaladas.jpg);
+
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 25px;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_heading {
+  padding-bottom: 20px;
+  font-size: 21px;
+  color: #000000;
+}
+
+.field {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputAd {
+    border-radius: 5px;
+    background-color: #e9e9f7;
+    padding: 5px;
+    width: 74%;
+    color: #7a7ab3;
+    border: 1px solid #dadaf7;
+}
+
+.inputAd:focus-visible {
+  outline: 1px solid #aeaed6;
+}
+
+.inputAd::placeholder {
+  color: #bcbcdf;
+}
+
+.btn_back {
+  width: 140px;
+  height: 45px;
+  font-size: 23px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgb(255, 250, 250);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+ }
+ 
+ .btn_back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(255 255 255);
+  z-index: -1;
+  transition: all 0.5s;
+ }
+ 
+ .btn_back:hover::before {
+  width: 100%;
+ }
+ 
+ .btn_back:hover {
+  color: rgb(2, 2, 2);
+ }
+ 
+ .btn_back:active:before {
+  background: #b9b9b9;
+ }
+
+ .sele_add{
+  background-color: #7878bd;
+  border-radius: 5px;
+  padding: 5px;
+  width: 34%;
+  color: #040404;
+  border: 1px solid #7c7cf1;
+ }
+
+ 
+.btn_agre {
+  background-color: #7878bd;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 7px 12px;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+ }
+ 
+ .btn_agre:hover {
+  background-color: #5f5f9c;
+ }
+
+ .ul_add {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ }
+
+ .li_add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #dadaf7;
+ }
