@@ -141,3 +141,11 @@
   padding: 10px;
   border-bottom: 1px solid #dadaf7;
  }
+
+ .btn_delete{
+  color: #870900;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+ }

@@ -15,14 +15,14 @@ function validate(post) {
 
   if (!post.summary) {
     errors.summary = "La descripción es requerida";
-  } else if (post.summary.length > 1000) {
-    errors.summary = "La descripción no puede tener mas de 1000 caracteres";
+  } else if (post.summary.length > 100) {
+    errors.summary = "La descripción no puede tener mas de 100 caracteres";
   }
 
   if (!post.steps) {
     errors.steps = "Las instrucciones son requeridas";
-  } else if (post.steps.length > 10) {
-    errors.steps = "Las instrucciones no pueden tener mas de 1000 caracteres";
+  } else if (post.steps.length > 100) {
+    errors.steps = "Las instrucciones no pueden tener mas de 100 caracteres";
   }
   // the health score must be between 0 and 100
   if (post.health_score < 0 || post.health_score > 100) {
@@ -92,11 +92,17 @@ function AddFood() {
 
   function handleSelect(e) {
     const select = post.diets.find((el) => el === e.target.value);
-    if (select) return;
-    setPost({
-      ...post,
-      diets: [...post.diets, e.target.value],
-    });
+    if (select) {
+      setPost({
+        ...post,
+        diets: post.diets.filter((el) => el !== e.target.value),
+      });
+    } else {
+      setPost({
+        ...post,
+        diets: [...post.diets, e.target.value],
+      });
+    }
   }
 
   return (

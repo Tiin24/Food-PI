@@ -1,22 +1,23 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Provider } from 'react-redux';
-import store from '../redux/store/index.js'
 import { BrowserRouter } from 'react-router-dom'
 import Landing from '../components/Landing/index'
 
-describe('LandingPage', () => {
+describe('Landing Page component test', () => {
 
-    it('has an image as background', () => {
-        render(
-            <Provider store={store}>
-                <BrowserRouter>
-                    <Landing />
-                </BrowserRouter>
-            </Provider>
-        )
-        const image = screen.getByRole('img');
-        expect(image).toBeInTheDocument();
-    })
+    test('renders content', () => {
 
-  });
+        const component = render(<BrowserRouter><Landing /></BrowserRouter>);   
+        expect(component.container).toHaveTextContent('WELCOME');
+    });
+
+    test(`WELCOME button should de working`, () => {
+        const component = render(<BrowserRouter><Landing /></BrowserRouter>);   
+        
+
+        expect(component.getByRole('button')).not.toBeDisabled()
+    });   
+
+
+
+});

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import './Paginado.css'
 
@@ -12,6 +13,7 @@ export function Pagination({ recipePerPage, recipes, paginado }) {
       <ul className="ul_pag">
         {pageNumber &&
           pageNumber.map((number) => (
+            // eslint-disable-next-line react/jsx-no-comment-textnodes
             <li className="li_pag" key={number}>
               <a className="btn_pag" onClick={() => paginado(number)}>{number}</a>
             </li>

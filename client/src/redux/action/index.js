@@ -70,7 +70,6 @@ export function getByName(name) {
       });
     } catch (error) {
       alert('Recipe not found');
-      window.location.href = 'http://localhost:3000/home';
       console.log(error);
     }
   }
