@@ -61,7 +61,7 @@ function AddFood() {
     } else {
       if (!post.image) {
         post.image =
-          "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
+          "https://i.pinimg.com/originals/05/a8/20/05a82044cd183e064d721e2aeacfdbe6.jpg";
       }
       dispatch(postRecipe(post));
       alert("Plato agregado");
@@ -91,17 +91,11 @@ function AddFood() {
   }
 
   function handleSelect(e) {
-    const select = post.diets.find((el) => el === e.target.value);
-    if (select) {
+    if(!post.diets.includes(e.target.name)) {
       setPost({
         ...post,
-        diets: post.diets.filter((el) => el !== e.target.value),
-      });
-    } else {
-      setPost({
-        ...post,
-        diets: [...post.diets, e.target.value],
-      });
+        diets: [...post.diets, e.target.value]
+      })
     }
   }
 
