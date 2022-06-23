@@ -186,7 +186,7 @@ function AddFood() {
           </select>
           <ul className="ul_add">
             <li className="li_add" >
-              {post.diets.map((i) => i + ", ")}
+              {post.diets?.map((i) => i + ", ")}
               </li>
           </ul>
           <div className="field">

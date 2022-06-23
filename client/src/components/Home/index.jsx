@@ -13,7 +13,6 @@ import Nav from "./Nav/index";
 import SearchBar from "./SearchBar";
 import './Filter.css'
 import './Home.css'
-import img from '../../img/pan-loader.gif'
 
 function Home() {
   const dispatch = useDispatch();

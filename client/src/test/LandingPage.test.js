@@ -13,8 +13,6 @@ describe('Landing Page component test', () => {
 
     test(`WELCOME button should de working`, () => {
         const component = render(<BrowserRouter><Landing /></BrowserRouter>);   
-        
-
         expect(component.getByRole('button')).not.toBeDisabled()
     });   
 

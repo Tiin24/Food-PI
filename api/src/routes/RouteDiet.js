@@ -12,14 +12,12 @@ router.get("/", async (req, res) => {
       .map((diet) => diet.diets.map((diet) => diet.name))
       .flat();
 
-    dietDb.forEach(async (diet) => {
-      Diet.findOrCreate({
-        where: {
-          name: diet,
-        },
-      });
-    });
-
+      const typeDiets = [...new Set(dietDb)]
+      typeDiets.forEach(async (d) => {
+          await Diet.findOrCreate({
+              where: { name: d }
+          })
+     })
     const allDiets = await Diet.findAll();
      res.send(allDiets);
   } catch (error) {
