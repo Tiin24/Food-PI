@@ -11,7 +11,7 @@ export const ORDER_BY_DIET = "ORDER_BY_DIET";
 export function getRecipes() {
   return async function (dispatch) {
     try {
-      const result = await axios.get(`http://localhost:3001/recipe`);
+      const result = await axios.get(`/recipe`);
       return dispatch({
         type: RECIPES,
         payload: result.data,
@@ -25,7 +25,7 @@ export function getRecipes() {
 export function getRecipeDetail(id) {
   return async function (dispatch) {
     try {
-      const result = await axios.get(`http://localhost:3001/recipe/${id}`);
+      const result = await axios.get(`/recipe/${id}`);
       return dispatch({
         type: RECIPE_DETAIL,
         payload: result.data,
@@ -39,7 +39,7 @@ export function getRecipeDetail(id) {
 export function getDiets() {
   return async function (dispatch) {
     try {
-      const result = await axios.get(`http://localhost:3001/diet`);
+      const result = await axios.get(`/diet`);
       return dispatch({
         type: GET_DIETS,
         payload: result.data,
@@ -52,7 +52,7 @@ export function getDiets() {
 
 export function postRecipe(payload) {
   return async function () {
-    const result = await axios.post(`http://localhost:3001/recipe`, payload);
+    const result = await axios.post(`/recipe`, payload);
     return {
       type: POST_RECIPE,
       payload: result.data,
@@ -63,7 +63,7 @@ export function postRecipe(payload) {
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const result = await axios.get(`http://localhost:3001/recipe?name=${name}`);
+      const result = await axios.get(`/recipe?name=${name}`);
       return dispatch({
         type: GET_BY_NAME,
         payload: result.data,
